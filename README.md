@@ -6,7 +6,7 @@
 </h2>
 
 ## Overview
-AllerTrans is a deep learning model designed to predict the potential allergenicity of proteins based on their primary structure. We utilized two protein language models (ESM-v2 and ProtT5) to extract distinct feature vectors for each sequence. Our approach combines these vectors and inputs them into a deep neural network for classification. Our model classifies proteins into allergenic or non-allergenic categories, demonstrating admissible improvement in all reported evaluation metrics in AlgPred 2.0. It achieves a sensitivity of 97.91%, specificity of 97.69%, accuracy of 97.80%, and an impressive area under the ROC curve of 99% using standard five-fold cross-validation on the AlgPred 2.0 dataset.
+AllerTrans is a deep learning model designed to predict the potential allergenicity of proteins based on their primary structure. We utilized two protein language models (ESM-v2 and ProtT5) to extract distinct feature vectors for each sequence. Our approach combines these vectors and inputs them into a deep neural network for classification. Our model classifies proteins into allergenic or non-allergenic categories, demonstrating admissible improvement in all reported evaluation metrics in the [AlgPred 2.0](https://doi.org/10.1093/bib/bbaa294). AllerTrans achieves a sensitivity of 97.91%, specificity of 97.69%, accuracy of 97.80%, and an impressive area under the ROC curve of 99% using standard five-fold cross-validation on the AlgPred 2.0 dataset.
 
 <h2 align="center">
   A comprehensive flowchart that includes all of our experiments
