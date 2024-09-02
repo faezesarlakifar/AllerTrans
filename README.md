@@ -2,11 +2,11 @@
   AllerTrans
 </h1>
 <h2 align="center">
-  An Improved Protein Allergenicity Prediction Model Using Deep Learning
+  A Deep Learning Method for Predicting the Allergenicity of Protein Sequences
 </h2>
 
 ## Overview
-AllerTrans is a deep learning model designed to predict the potential allergenicity of proteins based on their primary structure. We utilized two protein language models (ESM-v2 and ProtT5) to extract distinct feature vectors for each sequence. Our approach combines these vectors and inputs them into a deep neural network for classification. Our model classifies proteins into allergenic or non-allergenic categories, demonstrating admissible improvement in all reported evaluation metrics in the AlgPred 2.0. AllerTrans achieves a sensitivity of 97.91%, specificity of 97.69%, accuracy of 97.80%, and an impressive area under the ROC curve of 99% using standard five-fold cross-validation on the AlgPred 2.0 dataset.
+Recognizing the potential allergenicity of proteins is essential for ensuring their safety. Allergens are a major concern in determining protein safety, especially with the increasing use of recombinant proteins in new medical products. These proteins need careful allergenicity assessment to guarantee their safety. However, traditional laboratory testing for allergenicity is expensive and time-consuming. To address this challenge, bioinformatics offers efficient and cost-effective alternatives for predicting protein allergenicity. In this study, we developed an enhanced deep-learning model to predict the potential allergenicity of proteins based on their primary structure represented as protein sequences. In simple terms, this model classifies proteins into allergenic or non-allergenic classes. Our approach utilizes two protein language models to extract distinct feature vectors for each sequence, which are then input into a deep neural network model for classification. Each feature vector represents a specific aspect of the protein sequence, and combining them enhances the outcomes. Finally, we effectively combined the predictions of our top-performing models using ensemble modeling techniques. This could balance the model's sensitivity and specificity and improve the outcome. Our proposed model demonstrates admissible improvement compared to existing models, achieving a sensitivity of 97.91%, specificity of 97.69%, accuracy of 97.80%, and an impressive area under the ROC curve of 99% using the standard five-fold cross-validation.
 
 <h2 align="center">
   A comprehensive flowchart that includes all of our experiments
@@ -44,7 +44,3 @@ The utilized dataset for this study includes the public AlgPred 2.0 train and va
    - Navigate to the `modeling` folder.
    - Open and run the `nonlinear-DNN.ipynb` notebook to train and evaluate the deep neural network model. Ensure the required model checkpoints are available in the `model-checkpoints` folder.
    - For other models, run the respective notebooks (`classic-machine-learning.ipynb`, `single-layer-LSTM.ipynb`, `1D-CNN.ipynb`).
-
-## Acknowledgements
-
-We want to thank the developers of the ESM-v2 and ProtT5 models for providing the tools necessary for our feature extraction. Additionally, we acknowledge the public AlgPred 2.0 dataset, which helped us develop and evaluate our model.
