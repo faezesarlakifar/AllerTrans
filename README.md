@@ -8,6 +8,8 @@
 ## Overview
 Recognizing the potential allergenicity of proteins is essential for ensuring their safety. Allergens are a major concern in determining protein safety, especially with the increasing use of recombinant proteins in new medical products. These proteins need careful allergenicity assessment to guarantee their safety. However, traditional laboratory testing for allergenicity is expensive and time-consuming. To address this challenge, bioinformatics offers efficient and cost-effective alternatives for predicting protein allergenicity. In this study, we developed an enhanced deep-learning model to predict the potential allergenicity of proteins based on their primary structure represented as protein sequences. In simple terms, this model classifies proteins into allergenic or non-allergenic classes. Our approach utilizes two protein language models to extract distinct feature vectors for each sequence, which are then input into a deep neural network model for classification. Each feature vector represents a specific aspect of the protein sequence, and combining them enhances the outcomes. Finally, we effectively combined the predictions of our top-performing models using ensemble modeling techniques. This could balance the model's sensitivity and specificity and improve the outcome. Our proposed model demonstrates admissible improvement compared to existing models, achieving a sensitivity of 97.91%, specificity of 97.69%, accuracy of 97.80%, and an impressive area under the ROC curve of 99% using the standard five-fold cross-validation.
 
+bioRxiv DOI: [https://doi.org/10.1101/2024.08.09.607419](https://doi.org/10.1101/2024.08.09.607419)
+
 <h2 align="center">
   A comprehensive flowchart that includes all of our experiments
 </h2>
