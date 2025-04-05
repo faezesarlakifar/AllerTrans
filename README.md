@@ -10,6 +10,11 @@ Recognizing the potential allergenicity of proteins is essential for ensuring th
 
 bioRxiv DOI: [https://doi.org/10.1101/2024.08.09.607419](https://doi.org/10.1101/2024.08.09.607419)
 
+## Online Prediction Tool
+You can try out the AllerTrans model directly available on Hugging Face Spaces:
+
+[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/spaces/sfaezella/AllerTrans)
+
 <h2 align="center">
   A comprehensive flowchart that includes all of our experiments
 </h2>
