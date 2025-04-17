@@ -1,5 +1,5 @@
 [![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/spaces/sfaezella/AllerTrans)
-[![AllerTrans](https://img.shields.io/badge/bioRxiv-607419v2-red)]([https://huggingface.co/spaces/sfaezella/AllerTrans](https://www.biorxiv.org/content/10.1101/2024.08.09.607419v2))
+[![AllerTrans](https://img.shields.io/badge/bioRxiv-607419v2-red)](https://www.biorxiv.org/content/10.1101/2024.08.09.607419v2)
 <h1 align="center">
   AllerTrans
 </h1>
@@ -14,8 +14,7 @@ bioRxiv DOI: [https://doi.org/10.1101/2024.08.09.607419](https://doi.org/10.1101
 
 ## Online Prediction Tool
 You can try out the AllerTrans model directly available on Hugging Face Spaces:
-
-[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/spaces/sfaezella/AllerTrans)
+[https://huggingface.co/spaces/sfaezella/AllerTrans](https://huggingface.co/spaces/sfaezella/AllerTrans)
 
 <h2 align="center">
   A comprehensive flowchart that includes all of our experiments
