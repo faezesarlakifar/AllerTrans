@@ -1,3 +1,5 @@
+[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/spaces/sfaezella/AllerTrans)
+[![AllerTrans](https://img.shields.io/badge/bioRxiv-607419v2-red)]([https://huggingface.co/spaces/sfaezella/AllerTrans](https://www.biorxiv.org/content/10.1101/2024.08.09.607419v2))
 <h1 align="center">
   AllerTrans
 </h1>
