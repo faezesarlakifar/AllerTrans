@@ -1,0 +1,10 @@
+torch
+gradio
+transformers
+esm
+fair-esm  # if esm isn't installed via pip
+sentencepiece
+h5py
+spaces
+git+https://github.com/facebookresearch/esm.git
+git+https://github.com/agemagician/ProtTrans.git
