@@ -41,7 +41,7 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
 
 - **additional-experiments**
   - Includes supplementary experiments and analyses beyond the core modeling workflows.
-  - 
+    
 - **inference-app**
   - Contains code for the web-based prediction tool hosted on Hugging Face Spaces.
  
