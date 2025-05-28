@@ -1,8 +1,7 @@
-[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/spaces/sfaezella/AllerTrans)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
+[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Open%20Model-blueviolet)](https://huggingface.co/spaces/sfaezella/AllerTrans)
 [![Code Ocean](https://img.shields.io/badge/Code%20Ocean-Open%20Capsule-blue)](https://doi.org/10.24433/CO.1381053.v1)
-
-[![AllerTrans](https://img.shields.io/badge/bioRxiv-10.1101/2024.08.09.607419v2-red)](https://www.biorxiv.org/content/10.1101/2024.08.09.607419v2)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
+[![AllerTrans](https://img.shields.io/badge/bioRxiv-DOI:10.1101/2024.08.09.607419v2-red)](https://www.biorxiv.org/content/10.1101/2024.08.09.607419v2)
 
 
 <h1 align="center">
