@@ -1,7 +1,7 @@
 [![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Open%20Model-blueviolet)](https://huggingface.co/spaces/sfaezella/AllerTrans)
 [![Code Ocean](https://img.shields.io/badge/Code%20Ocean-Open%20Capsule-blue)](https://doi.org/10.24433/CO.1381053.v1)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
-[![AllerTrans](https://img.shields.io/badge/bioRxiv-DOI:10.1101/2024.08.09.607419v2-red)](https://www.biorxiv.org/content/10.1101/2024.08.09.607419v2)
+[![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.1093/biomethods/bpaf040-red)](https://doi.org/10.1093/biomethods/bpaf040)
 
 
 <h1 align="center">
@@ -14,7 +14,7 @@
 ## 🔍 Overview
 Allergens are a major concern in protein safety, especially with the growing use of recombinant proteins in medical products. Traditional allergenicity tests are costly and time-consuming, prompting the need for efficient bioinformatics solutions. In this study, we developed an enhanced deep learning model that classifies proteins as allergenic or non-allergenic based on their sequences. Our method extracts features using two protein language models and combines them in a deep neural network, followed by ensemble modeling to improve performance. The proposed model achieved strong results: 97.91% sensitivity, 97.69% specificity, 97.80% accuracy, and a 99% AUC using five-fold cross-validation.
 
-bioRxiv DOI: [https://doi.org/10.1101/2024.08.09.607419](https://doi.org/10.1101/2024.08.09.607419)
+DOI: [https://doi.org/10.1093/biomethods/bpaf040](https://doi.org/10.1093/biomethods/bpaf040)
 
 ## 🚀 Online Prediction Tool
 You can try out the AllerTrans model directly available on Hugging Face Spaces:
