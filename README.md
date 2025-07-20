@@ -1,7 +1,7 @@
-[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Open%20Model-blueviolet)](https://huggingface.co/spaces/sfaezella/AllerTrans)
+[![AllerTrans](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Online%20Prediction%20Tool-blueviolet)](https://huggingface.co/spaces/sfaezella/AllerTrans)
+[![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.1093/biomethods/bpaf040-red)](https://doi.org/10.1093/biomethods/bpaf040)
 [![Code Ocean](https://img.shields.io/badge/Code%20Ocean-Open%20Capsule-blue)](https://doi.org/10.24433/CO.1381053.v1)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
-[![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.1093/biomethods/bpaf040-red)](https://doi.org/10.1093/biomethods/bpaf040)
 
 
 <h1 align="center">
@@ -11,12 +11,12 @@
   A Deep Learning Method for Predicting the Allergenicity of Protein Sequences
 </h2>
 
-## 🔍 Overview
+## Overview
 Allergens are a major concern in protein safety, especially with the growing use of recombinant proteins in medical products. Traditional allergenicity tests are costly and time-consuming, prompting the need for efficient bioinformatics solutions. In this study, we developed an enhanced deep learning model that classifies proteins as allergenic or non-allergenic based on their sequences. Our method extracts features using two protein language models and combines them in a deep neural network, followed by ensemble modeling to improve performance. The proposed model achieved strong results: 97.91% sensitivity, 97.69% specificity, 97.80% accuracy, and a 99% AUC using five-fold cross-validation.
 
 DOI: [https://doi.org/10.1093/biomethods/bpaf040](https://doi.org/10.1093/biomethods/bpaf040)
 
-## 🚀 Online Prediction Tool
+## Online Prediction Tool
 You can try out the AllerTrans model directly available on Hugging Face Spaces:
 [https://huggingface.co/spaces/sfaezella/AllerTrans](https://huggingface.co/spaces/sfaezella/AllerTrans)
 
@@ -26,7 +26,7 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
 
 ![Experiments' Flowchart](images/flowchart.jpg)
 
-## 🛠️ Repository Structure
+## Repository Structure
 
 - **feature-extraction**
   - [1. ESM-v2-embeddings.ipynb](feature-extraction/1.%20ESM-v2-embeddings.ipynb): Extracts embeddings using [ESM-v2 model](https://github.com/facebookresearch/esm). Input protein sequences in FASTA format.
@@ -54,10 +54,10 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
 
 ![Model Architecture](images/Arch-AllerTrans.jpg)
 
-## 📂 Dataset
+## Dataset
 The utilized dataset in this study is the public AlgPred 2.0 train and validation sets, which are available [here](https://webs.iiitd.edu.in/raghava/algpred2/stand.html).
 
-## ⚙ Usage
+## Usage
 
 1. **Feature Extraction**:
     ```bash
