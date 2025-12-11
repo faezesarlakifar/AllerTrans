@@ -1,0 +1,6 @@
+transformers>=4.36.0
+torch
+numpy
+pandas
+git+https://github.com/facebookresearch/esm.git@v0.4.0
+h5py
