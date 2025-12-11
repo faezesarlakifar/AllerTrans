@@ -88,14 +88,7 @@ python run_all.py --fasta examples/protein_sequences.fasta --output examples/pre
 * `--fasta`: Path to your input FASTA file (single or multi-sequence).
 * `--output`: CSV file to save predictions.
 
-****
-```
->Sequence_1
-MKWVTFISLLFLFSSAYSRGVFRRDTHKSEIAHRFKDLGEEHFKGLVLIAFSQYLQQCPF
->Sequence_2
-GATCAGTGGTGCAGTGGAGTGGAGTGGAAGTGGGAGTGGAGTGGAGTGGTGGAAGTGGAG
-```
-### 3. Example Input
+#### Example Input
 
 File: `examples/protein_sequences.fasta`
 
@@ -106,7 +99,7 @@ MQEAGAVKFDIKNQCGYTVWAAGLPGGGKRLDQGQTWTVNLAAGTASARFWGRTGCTFDASGKGSCQTGDCGRQLSCTVS
 MSIQQIIEQKIQKEFQPHFLAIENESHLHHSNRGSESHFKCVIVSADFKNIRKVQRHQRIYQLLNEEL...
 ```
 
-### 4. Example Output
+#### Example Output
 
 File: `examples/predictions.csv`
 
