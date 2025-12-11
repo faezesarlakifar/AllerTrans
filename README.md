@@ -82,8 +82,6 @@ pip install -r requirements.txt
 
 ```bash
 cd src
-```
-```bash
 python run_all.py --fasta examples/protein_sequences.fasta --output examples/predictions.csv
 ```
 
