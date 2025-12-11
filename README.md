@@ -27,6 +27,7 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
 ![Experiments' Flowchart](images/flowchart.jpg)
 
 ## Repository Structure
+For transparency, this repository includes all the experiments, feature extraction, modeling notebooks, and tools necessary to reproduce the AllerTrans workflow.
 
 - **feature-extraction**
   - [1. ESM-v2-embeddings.ipynb](feature-extraction/1.%20ESM-v2-embeddings.ipynb): Extracts embeddings using [ESM-v2 model](https://github.com/facebookresearch/esm). Input protein sequences in FASTA format.
@@ -47,6 +48,10 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
     
 - **inference-app**
   - Contains code for the web-based prediction tool hosted on Hugging Face Spaces.
+
+- **src**
+  - Contains the CLI and scripts for end-to-end inference using AllerTrans.
+  - Users can run predictions on their own protein sequences in FASTA format via a single command.
  
 <h2 align="center">
   General AllerTrans Model Architecture
@@ -57,24 +62,75 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
 ## Dataset
 The utilized dataset in this study is the public AlgPred 2.0 train and validation sets, which are available [here](https://webs.iiitd.edu.in/raghava/algpred2/stand.html).
 
-## Usage
+---
 
-1. **Feature Extraction**:
-    ```bash
-    cd feature-extraction
-    ```
-   - Run the notebooks in the `feature-extraction` folder to extract the necessary feature vectors from protein sequences.
-   - Input protein sequences must be in FASTA format.
+## CLI Usage for Inference
 
-3. **Model Training and Evaluation**:
-   ```bash
-    cd modeling
-    ```
-   - Open and run the `nonlinear-DNN.ipynb` notebook to train and evaluate the deep neural network model. Ensure the required model checkpoints are available in the `model-checkpoints` folder.
-   - For other models, run the respective notebooks (`classic-machine-learning.ipynb`, `single-layer-LSTM.ipynb`, `1D-CNN.ipynb`).
+### 1. Install Requirements
 
-<!-----
-<p align="center">
-  <img src="images/Arch-AllerTrans.jpg" alt="Model Architecture" width="800"/>
-</p>
->
+```bash
+git clone https://github.com/faezesarlakifar/AllerTrans.git
+cd AllerTrans
+pip install -r requirements.txt
+```
+
+> Make sure torch CPU-only is fine.
+
+---
+
+### 2. Run Predictions
+
+```bash
+cd src
+```
+```bash
+python run_all.py --fasta examples/protein_sequences.fasta --output examples/predictions.csv
+```
+
+* `--fasta`: Path to your input FASTA file (single or multi-sequence).
+* `--output`: CSV file to save predictions.
+
+****
+```
+>Sequence_1
+MKWVTFISLLFLFSSAYSRGVFRRDTHKSEIAHRFKDLGEEHFKGLVLIAFSQYLQQCPF
+>Sequence_2
+GATCAGTGGTGCAGTGGAGTGGAGTGGAAGTGGGAGTGGAGTGGAGTGGTGGAAGTGGAG
+```
+### 3. Example Input
+
+File: `examples/protein_sequences.fasta`
+
+```
+>Sequence_1
+MQEAGAVKFDIKNQCGYTVWAAGLPGGGKRLDQGQTWTVNLAAGTASARFWGRTGCTFDASGKGSCQTGDCGRQLSCTVSGAVPATLAEYTQSDQDY
+>Sequence_2
+MSIQQIIEQKIQKEFQPHFLAIENESHLHHSNRGSESHFKCVIVSADFKNIRKVQRHQRIYQLLNEEL...
+```
+
+### 4. Example Output
+
+File: `examples/predictions.csv`
+
+|     id      | prediction         |
+| ----------- | ------------------ |
+| Sequence_1  | Potential Allergen |
+| Sequence_2  | Non-Allergen       |
+
+ Replace our `examples/protein_sequences.fasta` with your own FASTA file containing the sequences you want to classify.
+
+## **Citation**
+
+If our work contributes to your research, please cite:
+
+```bibtex
+@ARTICLE{AllerTrans2025,
+  author  = {Sarlakifar, Faezeh and Malek, Hamed and Allahyari Fard, Najaf},
+  title   = {AllerTrans: a deep learning method for predicting the allergenicity of protein sequences},
+  journal = {Biology Methods and Protocols},
+  year    = {2025},
+  volume  = {10},
+  number  = {1},
+  doi     = {10.1093/biomethods/bpaf040}
+}
+```
