@@ -76,8 +76,6 @@ pip install -r requirements.txt
 
 > Make sure torch CPU-only is fine.
 
----
-
 ### 2. Run Predictions
 
 ```bash
@@ -87,6 +85,8 @@ python run_all.py --fasta examples/protein_sequences.fasta --output examples/pre
 
 * `--fasta`: Path to your input FASTA file (single or multi-sequence).
 * `--output`: CSV file to save predictions.
+
+---
 
 #### Example Input
 
@@ -108,7 +108,9 @@ File: `examples/predictions.csv`
 | Sequence_1  | Potential Allergen |
 | Sequence_2  | Non-Allergen       |
 
- Replace our `examples/protein_sequences.fasta` with your own FASTA file containing the sequences you want to classify.
+Replace our `examples/protein_sequences.fasta` with your own FASTA file containing the sequences you want to classify.
+
+---
 
 ## **Citation**
 
