@@ -29,29 +29,46 @@ You can try out the AllerTrans model directly available on Hugging Face Spaces:
 ## Repository Structure
 For transparency, this repository includes all the experiments, feature extraction, modeling notebooks, and tools necessary to reproduce the AllerTrans workflow.
 
+```
+AllerTrans/
+├── notebooks/                  # All Jupyter notebooks, organized by workflow
+│   ├── feature-extraction/     # Notebooks for extracting protein feature vectors
+│   │   ├── 1.ESM-v2-embeddings.ipynb
+│   │   ├── 2.ProtT5-embeddings.ipynb
+│   │   └── 3.AAC-feature-vectors.ipynb
+│   ├── modeling/               # Notebooks for training and evaluating models
+│   │   ├── 1D-CNN.ipynb
+│   │   ├── classic-machine-learning.ipynb
+│   │   ├── nonlinear-DNN.ipynb
+│   │   └── single-layer-LSTM.ipynb
+│   └── additional-experiments/ # Supplementary experiments
+├── src/                        # Users can run predictions on their own protein sequences in FASTA format via a single command.
+│   ├── allertrans/             # CLI and scripts for end-to-end inference. 
+│   │   ├── __main__.py         # Entry point for CLI execution
+│   │   ├── cli.py              # Command-line interface
+│   │   ├── model.py            # Loading models and running predictions
+│   │   └── utils.py            # Helper functions and utilities
+│   ├── checkpoints/            # Pretrained model weights
+│   ├── examples/               # Example input and output files
+│   ├── extract.py              # Script for ESM-2 embedding
+│   ├── prott5_embedder.py      # Script for ProtT5 embedding
+│   └── run_all.py              # Script to run full workflow
+├── images/                     # Figures and diagrams used in notebooks or README
+├── inference-app/              # Contains code for the web-based prediction tool hosted on Hugging Face Spaces.
+├── requirements.txt            # Python dependencies
+```
+### Notebooks in detail:
+
 - **feature-extraction**
-  - [1. ESM-v2-embeddings.ipynb](feature-extraction/1.%20ESM-v2-embeddings.ipynb): Extracts embeddings using [ESM-v2 model](https://github.com/facebookresearch/esm). Input protein sequences in FASTA format.
-  - [2. ProtT5-embeddings.ipynb](feature-extraction/2.%20ProtT5-embeddings.ipynb): Extracts embeddings using [ProtT5 model](https://github.com/agemagician/ProtTrans). Input protein sequences in FASTA format.
-  - [3. AAC-feature-vectors.ipynb](feature-extraction/3.%20AAC-feature-vectors.ipynb): Generates amino acid composition feature vectors. Input protein sequences in FASTA format.
+  - [1. ESM-v2-embeddings.ipynb](notebooks/feature-extraction/1.%20ESM-v2-embeddings.ipynb): Extracts embeddings using [ESM-v2 model](https://github.com/facebookresearch/esm). Input protein sequences in FASTA format.
+  - [2. ProtT5-embeddings.ipynb](notebooks/feature-extraction/2.%20ProtT5-embeddings.ipynb): Extracts embeddings using [ProtT5 model](https://github.com/agemagician/ProtTrans). Input protein sequences in FASTA format.
+  - [3. AAC-feature-vectors.ipynb](notebooks/feature-extraction/3.%20AAC-feature-vectors.ipynb): Generates amino acid composition feature vectors. Input protein sequences in FASTA format.
 
 - **modeling**
-  - [classic-machine-learning.ipynb](modeling/classic-machine-learning.ipynb): Classic machine learning models' training and evaluation, including SVM, RF, XGBoost, and KNN. This notebook also tests the effect of hyperparameter tuning and the autoencoder.
-  - [nonlinear-DNN.ipynb](modeling/nonlinear-DNN.ipynb): Train and evaluation of our top-performing deep neural network models, using ESM-v2 and ProtT5 embeddings, and AAC feature vectors.
-  - [single-layer-LSTM.ipynb](modeling/single-layer-LSTM.ipynb): Training and evaluation of a single-layer LSTM (Long Short-Term Memory) model.
-  - [1D-CNN.ipynb](modeling/1D-CNN.ipynb): Training and evaluation of a 1-dimensional CNN (Convolutional neural network) model.
-
-- **model-checkpoints**
-  - Contains saved checkpoints of the trained models required for the `nonlinear-DNN` notebook.
-
-- **additional-experiments**
-  - Includes supplementary experiments and analyses beyond the core modeling workflows.
-    
-- **inference-app**
-  - Contains code for the web-based prediction tool hosted on Hugging Face Spaces.
-
-- **src**
-  - Contains the CLI and scripts for end-to-end inference using AllerTrans.
-  - Users can run predictions on their own protein sequences in FASTA format via a single command.
+  - [classic-machine-learning.ipynb](notebooks/modeling/classic-machine-learning.ipynb): Classic machine learning models' training and evaluation, including SVM, RF, XGBoost, and KNN. This notebook also tests the effect of hyperparameter tuning and the autoencoder.
+  - [nonlinear-DNN.ipynb](notebooks/modeling/nonlinear-DNN.ipynb): Train and evaluation of our top-performing deep neural network models, using ESM-v2 and ProtT5 embeddings, and AAC feature vectors. This notebook requires the pretrained model weights located in ```src/checkpoints/``` to run evaluations and reproduce results.
+  - [single-layer-LSTM.ipynb](notebooks/modeling/single-layer-LSTM.ipynb): Training and evaluation of a single-layer LSTM (Long Short-Term Memory) model.
+  - [1D-CNN.ipynb](notebooks/modeling/1D-CNN.ipynb): Training and evaluation of a 1-dimensional CNN (Convolutional neural network) model.
  
 <h2 align="center">
   General AllerTrans Model Architecture
@@ -60,7 +77,7 @@ For transparency, this repository includes all the experiments, feature extracti
 ![Model Architecture](images/Arch-AllerTrans.jpg)
 
 ## Dataset
-The utilized dataset in this study is the public AlgPred 2.0 train and validation sets, which are available [here](https://webs.iiitd.edu.in/raghava/algpred2/stand.html).
+The utilized dataset in this study is the public AlgPred 2.0 train and validation sets, that are available [here](https://webs.iiitd.edu.in/raghava/algpred2/stand.html).
 
 ---
 
